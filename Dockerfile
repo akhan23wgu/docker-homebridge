@@ -5,6 +5,8 @@ RUN apk add --no-cache git python make g++ avahi-compat-libdns_sd avahi-dev dbus
   && chmod 4755 /bin/ping \
   && mkdir /homebridge
 
+RUN npm install -g --unsafe-perm homebridge-webos-tv
+
 ENV HOMEBRIDGE_VERSION=0.4.45
 RUN npm install -g --unsafe-perm homebridge@${HOMEBRIDGE_VERSION}
 
